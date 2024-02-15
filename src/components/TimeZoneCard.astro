@@ -1,6 +1,7 @@
 ---
 import { getCurrentTimeInItaly, formatTimeForItaly } from "../lib/helpers";
 import Card from "./Card/index.astro";
+import Pulse from "./Pulse.astro";
 ---
 
 <script>
@@ -28,12 +29,17 @@ import Card from "./Card/index.astro";
   });
 </script>
 
-<Card colSpan="lg:col-span-2" rowSpan="md:row-span-2" title="Time zone">
+<Card colSpan="lg:col-span-1" rowSpan="md:row-span-1">
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col">
   <time
     datetime=""
     id="timeDisplay"
-    class="text-2xl xl:text-5xl xl:whitespace-nowrap w-50 xl:w-100 h-[calc(100%-28px)] font-serif flex justify-center items-center"
+    class="text-xl xl:text-2xl xl:whitespace-nowrap w-50 xl:w-100 h-[calc(100%-8px)] font-serif flex justify-center items-center"
   >
     {formatTimeForItaly(getCurrentTimeInItaly())}
   </time>
+</div>
+<Pulse />
+</div>
 </Card>

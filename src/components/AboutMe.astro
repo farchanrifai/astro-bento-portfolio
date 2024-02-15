@@ -1,20 +1,27 @@
 ---
 import Card from "./Card/index.astro";
+import { Icon } from 'astro-icon/components';
+interface Props {
+  title?: string;
+  body?: string;
+  colSpan?: string;
+  rowSpan?: string;
+  href?: string;
+  colorText?: string;
+}
+const { title, body, colSpan, rowSpan, href, colorText } = Astro.props;
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="About me">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-7" title="About me">
   <div class="flex flex-col gap-2">
     <p class="text-sm font-light">
-      Hi, I'm Gianmarco, a front-end software developer from Italy.
+      Hi, I am Farchan, a front-end software developer from Italy.
       <br />
       My primary tools of choice includes:
       <ul class="list-disc list-inside">
         <li>JavaScript</li>
         <li>React</li>
         <li>Solidjs</li>
-        <li>Astro</li>
-        <li>svelte</li>
-        <li>Nodejs</li>
       </ul>
     </p>
     <p class="text-sm font-light">
@@ -23,9 +30,14 @@ import Card from "./Card/index.astro";
       passports, they're interesting pieces of history to me.
     </p>
     <p class="text-sm font-light">
-      While I have some preferred tools, I always choose the best one for the
-      job, even if it's not on my usual list. My goal is to find the right
-      solution for each project.
+      While I have some preferred tool.
+    </p>
+    <p class="text-sm font-light">
+      <a
+        href="/blog/post1"
+        target="_self"
+        class="h-6 float-left hover:text-primary-400 transition-transform ease-in-out duration-100 z-10"
+        class="text-red-500"><b>&#x21AF; Read more..</b></a>
     </p>
   </div>
 </Card>

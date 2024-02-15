@@ -3,7 +3,7 @@ import Card from "./Card/index.astro";
 import { LINKS } from "../lib/constants";
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-4">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-3">
   <div class="h-full">
     <header class="flex items-center">
       <h1 class="text-white text-xl font-bold">
@@ -12,23 +12,26 @@ import { LINKS } from "../lib/constants";
     </header>
     <address class="flex flex-col mt-4">
       <h2 class="text-gray-500">Contact Details</h2>
-      <p>cavallogianmarco@gmail.com</p>
-      <p>Italy</p>
+      <p><a href="mailto:hi@farchan.co?" target="_blank" class="h-6 float-left hover:text-primary-400 transition-transform ease-in-out duration-100 z-10"
+        class="text-red-500">hi@farchan.co</a></p>
     </address>
     <div class="flex flex-col mt-4 w-fit">
       <h2 class="text-gray-500">Socials</h2>
       <ul>
         <li>
-          <a href={LINKS.linkedin} target="_blank">Linkedin</a>
+          <a href={LINKS.linkedin} target="_blank"
+          class="h-6 float-left hover:text-primary-400 transition-transform ease-in-out duration-100 z-10"
+          class="text-red-500">Linkedin</a>
         </li>
         <li>
-          <a href={LINKS.github} target="_blank">Github</a>
+          <a href={LINKS.github} target="_blank"
+          class="h-6 float-left hover:text-primary-400 transition-transform ease-in-out duration-100 z-10"
+          class="text-red-500">Github</a>
         </li>
         <li>
-          <a href={LINKS.medium} target="_blank">Medium</a>
-        </li>
-        <li>
-          <a href={LINKS.discord} target="_blank">Discord</a>
+          <a href={LINKS.medium} target="_blank"
+          class="h-6 float-left hover:text-primary-400 transition-transform ease-in-out duration-100 z-10"
+          class="text-red-500">Medium</a>
         </li>
       </ul>
     </div>
