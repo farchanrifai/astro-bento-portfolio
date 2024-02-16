@@ -13,28 +13,88 @@ const { title, body, colSpan, rowSpan, href, colorText } = Astro.props;
 ---
 <style>
 ul {  
-  text-indent: -20px; /* key property */
-  margin-left: 20px; /* key property */
+  text-indent: -22.5px; /* key property */
+  margin-left: 30px; /* key property */
   
 }
 li { margin-bottom: 5px; }
+
+div.scroll {
+  height: 970px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+p span {
+  font-size: 1.2em;
+}
 </style>
 
-<Card colSpan="md:col-span-3" rowSpan="md:row-span-14" title="About me">
-  <div class="flex flex-col gap-2">
-    <p class="text-sm font-light">
-      Hi, I am Farchan, a front-end software developer from Italy.
-      <br />
+
+<Card colSpan="md:col-span-3" rowSpan="md:row-span-12">
+  <div>
+  <div class="flex flex-col gap-2 scroll">
+    <h1 class="text-xl font-light">
+      <p>
+        <span><b>About Me</b></span>
+      </p>
+    </h1>
+    <p>
+      A young and enthusiastic professional who has been responsible for providing accounting services to companies from various industries. I have a strong interest in learning new things and gaining new experiences. While I enjoy working independently, I thrive when working in a team. I’m interested in accounting and taxation. I am also fascinated with graphic design and how consumer technology evolves. I spend my spare time on sports, improving my design skills, learn to code, and hanging out with friends and family.
     </p>
+    <br />
+    <h1 class="text-xl font-light">
+      <p>
+      <span><b>Work Experience</b></span>
+      </p>
+    </h1>
     <p class="text-sm font-light">
-      While I have some preferred tool.
-    </p>
-    <p class="text-sm font-light">
-      <h2>My Logiframe Experience</h2>
+      <h1 class="text-xl font-light">
+        <a
+          href="https://luckybundle.co"
+          target="_blank"
+          class="h-6 float-left hover:text-primary-400 transition-transform ease-in-out duration-100 z-10"
+          class="text-red-500"><b>Lucky Bundle</b>
+        </a>
+      </h1>
+    <h2 class="text-xs font-light text-primary-100">Senior Accounting Staff (Nov 2022 - Present)</h2>
+    <hr>
+    <p>In November 2022, I transitioned to Lucky Bundle, where I officially joined as a Senior Accounting Staff. However, my involvement with Lucky Bundle dates back to December 2021 when I began working with them as a consultant at Logiframe. This transition was motivated by my eagerness to explore further learning opportunities in the field of accounting and finance.</p>
+    <p>During my time at Lucky Bundle, I took on various key responsibilities, including:</p>
+    <ul class="list-disc list-inside">
+        <li>Conducting all accounting activities, from posting journals to preparing financial reports and analysis.</li>
+        <li>Maintaining inventory costing to ensure accurate financial records.</li>
+        <li>Facilitating smooth payment processes for all transactions.</li>
+        <li>Assisting management in preparing internal reports on a weekly, biweekly, and monthly basis.</li>
+        <li>Reconciling thousands of sales transactions from eight stores and the B2B division.</li>
+        <li>Conducting internal audits in stores to ensure compliance with company policies and procedures.</li>
+        <li>Preparing and maintaining Standard Operating Procedures (SOP) for procure-to-pay and order-to-cash activities.</li>
+    </ul>
+    <p>Since joining Lucky Bundle, I have received some awards:</p>
+    <ul class="list-disc list-inside">
+        <li>Q3 2023 Top Performer.</li>
+        <li>Q2 2023 Top performer in Task Prioritization category.</li>
+    </ul>
+    <p>This experience provided me with invaluable insights and skills, further enriching my expertise in accounting and finance.</p>
+      
+      <br/>
+
+      <h1 class="text-xl font-light">
+        <a
+          href="https://logiframe.com"
+          target="_blank"
+          class="h-6 float-left hover:text-primary-400 transition-transform ease-in-out duration-100 z-10"
+          class="text-red-500"><b>Logiframe</b>
+        </a>
+      </h1>
+      <h2 class="text-xs font-light text-primary-100">Service Delivery Manager (Apr 2022 - Nov 2022)</h2>
+      <h2 class="text-xs font-light text-primary-100">Senior Associate (Apr 2021 - Mar 2022)</h2>
+      <h2 class="text-xs font-light text-primary-100">Associate (Dec 2019 - Mar 2021)</h2>
+      <hr class="text-red-500">
       <p>I began my journey at Logiframe, a consulting firm specializing in Accounting, Finance, and Tax services, as an Accounting Associate in late 2019. Over the course of two years, I progressed to the role of Service Delivery Manager by early 2022.</p>
       <p>Working at Logiframe was both thrilling and challenging. I relished the opportunity to collaborate with over 50 clients from various industries, addressing a diverse array of unique challenges. Engaging with individuals from different backgrounds, including staff, managers, and CEOs, enriched my experience and provided valuable insights.</p>
       <p>In my role, I primarily focused on finance and accounting tasks, with some involvement in taxation. Here are some highlights of my responsibilities:</p>
-      <ul class="list-disc list-inside padding-left="10px" text-indent="-10px">
+      <ul class="list-disc list-inside">
           <li>Providing comprehensive accounting services to clients, encompassing tasks such as collecting financial data, recording journals, preparing financial statements, and conducting analysis.</li>
           <li>Managing Balance Sheet items such as Inventory, Fixed Assets, Receivables, and Payables.</li>
           <li>Conducting three-way matching validation for invoices and their supporting documents, and creating daily payment schedules.</li>
@@ -45,12 +105,6 @@ li { margin-bottom: 5px; }
       </ul>
       <p>Notable clients I have worked with include Andalin Group, Gigacover, Gunung Raja Paksi, Cita Rasa Prima Group, PasarPolis, Youvit, Pintek, Principia, and Lucky Bundle.</p>
     </p>
-    <p class="text-sm font-light">
-      <a
-        href="/"
-        target="_self"
-        class="h-6 float-left hover:text-primary-400 transition-transform ease-in-out duration-100 z-10"
-        class="text-red-500"><b>&#x21AF; Read more..</b></a>
-    </p>
   </div>
+</div>
 </Card>

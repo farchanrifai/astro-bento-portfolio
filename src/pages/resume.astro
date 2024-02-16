@@ -45,22 +45,21 @@ import Globe from "../components/Globe";
   description="Software developer with strong focus on the user experience animations and micro interactions"
 >
   <main
-    class="text-white m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-rows-12 lg:grid-cols-4 lg:gap-4 lg:max-h-[4000px]"
+    class="text-white m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-rows-12 lg:grid-cols-4 lg:gap-4"
   >
     <MoreIntroCard />
     <MoreAboutMe />
     <Card
       colSpan="md:col-span-1"
       rowSpan="md:row-span-1"
-      title="Read my blog"
+      title="My blog posts"
       target="_blank"
       href="https:/arx.toys"
-      class="blogbg"
     />
     <Card
       colSpan="md:col-span-1"
       rowSpan="md:row-span-1"
-      title="Countries I visited"
+      title="Upcoming journey"
       href="travel"
       colorText="text-neutral-900"
     >
@@ -68,5 +67,12 @@ import Globe from "../components/Globe";
         <Globe client:load />
       </p>
     </Card>
+    <Card
+      colSpan="md:col-span-1"
+      rowSpan="md:row-span-1"
+      title="Go back"
+      target="_self"
+      href="/"
+    />
   </main>
 </Layout>
