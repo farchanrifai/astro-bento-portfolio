@@ -1,0 +1,56 @@
+---
+import Card from "./Card/index.astro";
+import { Icon } from 'astro-icon/components';
+interface Props {
+  title?: string;
+  body?: string;
+  colSpan?: string;
+  rowSpan?: string;
+  href?: string;
+  colorText?: string;
+}
+const { title, body, colSpan, rowSpan, href, colorText } = Astro.props;
+---
+<style>
+ul {  
+  text-indent: -20px; /* key property */
+  margin-left: 20px; /* key property */
+  
+}
+li { margin-bottom: 5px; }
+</style>
+
+<Card colSpan="md:col-span-3" rowSpan="md:row-span-14" title="About me">
+  <div class="flex flex-col gap-2">
+    <p class="text-sm font-light">
+      Hi, I am Farchan, a front-end software developer from Italy.
+      <br />
+    </p>
+    <p class="text-sm font-light">
+      While I have some preferred tool.
+    </p>
+    <p class="text-sm font-light">
+      <h2>My Logiframe Experience</h2>
+      <p>I began my journey at Logiframe, a consulting firm specializing in Accounting, Finance, and Tax services, as an Accounting Associate in late 2019. Over the course of two years, I progressed to the role of Service Delivery Manager by early 2022.</p>
+      <p>Working at Logiframe was both thrilling and challenging. I relished the opportunity to collaborate with over 50 clients from various industries, addressing a diverse array of unique challenges. Engaging with individuals from different backgrounds, including staff, managers, and CEOs, enriched my experience and provided valuable insights.</p>
+      <p>In my role, I primarily focused on finance and accounting tasks, with some involvement in taxation. Here are some highlights of my responsibilities:</p>
+      <ul class="list-disc list-inside padding-left="10px" text-indent="-10px">
+          <li>Providing comprehensive accounting services to clients, encompassing tasks such as collecting financial data, recording journals, preparing financial statements, and conducting analysis.</li>
+          <li>Managing Balance Sheet items such as Inventory, Fixed Assets, Receivables, and Payables.</li>
+          <li>Conducting three-way matching validation for invoices and their supporting documents, and creating daily payment schedules.</li>
+          <li>Offering client support, including assistance with budgeting, forecasting, and guidance on accounting issues as they arose.</li>
+          <li>Conducting software demos, training sessions, and overseeing implementation and data migration for a range of software including Xero, Hubdoc, Unleashed, Workflowmax, Vend, and Eats365.</li>
+          <li>Leading internal teams in implementing timesheet software and integrating it with Xero, our preferred accounting system.</li>
+          <li>Acting as the main speaker in Xero's webinars for Xero Partners in Indonesia.</li>
+      </ul>
+      <p>Notable clients I have worked with include Andalin Group, Gigacover, Gunung Raja Paksi, Cita Rasa Prima Group, PasarPolis, Youvit, Pintek, Principia, and Lucky Bundle.</p>
+    </p>
+    <p class="text-sm font-light">
+      <a
+        href="/"
+        target="_self"
+        class="h-6 float-left hover:text-primary-400 transition-transform ease-in-out duration-100 z-10"
+        class="text-red-500"><b>&#x21AF; Read more..</b></a>
+    </p>
+  </div>
+</Card>

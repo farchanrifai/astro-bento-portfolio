@@ -1,0 +1,29 @@
+---
+import Card from "./Card/index.astro";
+import Pulse from "./Pulse.astro";
+---
+
+<style>
+  ul {  
+    text-indent: -1px; /* key property */
+    margin-left: 1px; /* key property */
+    
+  }
+  li { margin-bottom: 2px; }
+  </style>
+
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-2">
+  <div class="flex justify-between w-full items-start mb-2">
+    <div class="flex flex-col">
+      <h2 class="text-xl font-bold m-0 z-20">Last 5 books I read</h2>
+    </div>
+    <Pulse />
+  </div>
+  <ul class="m-0 font-light text-base list-disc text-xs list-inside padding-left="1px" text-indent="-1px">
+    <li>The Subtle Art of Not Giving a F*ck</li>
+    <li>Ubur Ubur Lembur</li>
+    <li>Koala Kumal</li>
+    <li>Cinta Brontosaurus</li>
+    <li>Marmut Merah Jambu</li>
+</ul>
+</Card>

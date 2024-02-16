@@ -6,6 +6,7 @@ import ContactsCard from "../components/ContactsCard.astro";
 import TimeZone from "../components/TimeZoneCard.astro";
 import AboutMe from "../components/AboutMe.astro";
 import Now from "../components/Now.astro";
+import MoreNow from "../components/MoreNow.astro";
 import Globe from "../components/Globe";
 ---
 
@@ -40,19 +41,25 @@ import Globe from "../components/Globe";
   >
     <IntroCard />
     <AboutMe />
-    <ContactsCard />
     <Card
       colSpan="md:col-span-1"
       rowSpan="md:row-span-2"
-      title="Read my blog"
-      target="_blank"
-      body="Dive into randomness, endless topics await!"
-      href="https:/arx.toys"
+      title="My resume"
+      body="Know more about me and let's work together!"
+      target="_self"
+      href="/resume"
     />
     <Card
       colSpan="md:col-span-1"
       rowSpan="md:row-span-1"
-      title="Countries I visited"
+      title="My blog posts"
+      target="_blank"
+      href="https:/arx.toys"
+    />
+    <Card
+      colSpan="md:col-span-1"
+      rowSpan="md:row-span-3"
+      title="Next journey"
       href="travel"
       colorText="text-neutral-900"
     >
@@ -60,16 +67,26 @@ import Globe from "../components/Globe";
         <Globe client:load />
       </div>
     </Card>
-    <Now />
+    <Card
+      colSpan="md:col-span-1"
+      rowSpan="md:row-span-2"
+      title="My 2023 wrapped"
+      body="Denny Caknan, Bring Me The Horizon, Niki, Post Malone, Polyphia"
+      target="_blank"
+      href="https://open.spotify.com/playlist/37i9dQZF1Fa1IIVtEpGUcU?si=91237c5ff03647d6">
+    </Card>
+    <Card
+      colSpan="md:col-span-1"
+      rowSpan="md:row-span-1"
+      title="Old projects"
+      target="_blank"
+      href="https://github.com/farchanrifai"
+    />
     <Card 
       colSpan="md:col-span-1"
       rowSpan="md:row-span-1">
-      <p class="text-xs">
-        © 2023 · Crafted with ♥️ using <a
-          href="https://astro.build/"
-          target="_blank"
-          class="text-red-500">Astro</a
-        > by Gianmarco.
+      <p class="text-xs" align="center">
+        Early to bed and early to rise probably indicates unskilled labor. 👀
       </p>
     </Card>
   </main>

@@ -8,6 +8,9 @@ const GlobeComponent = () => {
   const visitedCountries = [
     "Indonesia",
     "Singapore",
+    "Thailand",
+    "Japan",
+    "Malaysia",
   ];
 
   onMount(() => {

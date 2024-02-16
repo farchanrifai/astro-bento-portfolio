@@ -12,6 +12,26 @@ import { remarkReadingTime } from "./src/lib/ remark-reading-time.mjs";
 export default defineConfig({
   site: "https://farchan.co/",
   integrations: [
+    icon({
+      svgoOptions: {
+        multipass: true,
+        plugins: [
+          {
+            name: "preset-default",
+            params: {
+              overrides: {
+                // customize default plugin options
+                inlineStyles: {
+                  onlyMatchedOnce: false,
+                },
+                // or disable plugins
+                removeDoctype: false,
+              }
+            }
+          }
+        ]
+      }
+    }),
     sitemap(),
     robotsTxt({
       sitemap: [

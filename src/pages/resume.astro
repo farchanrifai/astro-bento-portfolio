@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card/index.astro";
+import IntroCard from "../components/IntroCard.astro";
+import MoreIntroCard from "../components/MoreIntroCard.astro";
+import ContactsCard from "../components/ContactsCard.astro";
+import TimeZone from "../components/TimeZoneCard.astro";
+import AboutMe from "../components/AboutMe.astro";
+import MoreAboutMe from "../components/MoreAboutMe.astro";
+import Now from "../components/Now.astro";
+import MoreNow from "../components/MoreNow.astro";
+import Globe from "../components/Globe";
+---
+<style>
+    blogbg {background-color: #000000;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E");       
+    }
+</style>
+
+
+<script>
+  import { stagger, spring, timeline, type TimelineDefinition } from "motion";
+  import { loaderAnimation } from "../lib/constants";
+  const cards = document.querySelectorAll(".card");
+
+  const sequence = [
+    loaderAnimation,
+    [
+      cards,
+      { y: ["40%", "0%"], opacity: [0, 1] },
+      {
+        at: "-0.1",
+        duration: 0.4,
+        delay: stagger(0.3),
+        easing: spring({ velocity: 100, stiffness: 50, damping: 10 }),
+      },
+    ],
+  ];
+
+  timeline(sequence as TimelineDefinition);
+</script>
+
+<Layout
+  title="Farchan Rifai"
+  description="Software developer with strong focus on the user experience animations and micro interactions"
+>
+  <main
+    class="text-white m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-rows-12 lg:grid-cols-4 lg:gap-4 lg:max-h-[4000px]"
+  >
+    <MoreIntroCard />
+    <MoreAboutMe />
+    <Card
+      colSpan="md:col-span-1"
+      rowSpan="md:row-span-1"
+      title="Read my blog"
+      target="_blank"
+      href="https:/arx.toys"
+      class="blogbg"
+    />
+    <Card
+      colSpan="md:col-span-1"
+      rowSpan="md:row-span-1"
+      title="Countries I visited"
+      href="travel"
+      colorText="text-neutral-900"
+    >
+      <div class="h-full w-full absolute inset-0 -z-10">
+        <Globe client:load />
+      </p>
+    </Card>
+  </main>
+</Layout>

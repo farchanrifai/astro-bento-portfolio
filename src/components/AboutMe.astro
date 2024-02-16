@@ -1,6 +1,7 @@
 ---
 import Card from "./Card/index.astro";
 import { Icon } from 'astro-icon/components';
+import Pulse from "../components/Pulse.astro";
 interface Props {
   title?: string;
   body?: string;
@@ -12,7 +13,7 @@ interface Props {
 const { title, body, colSpan, rowSpan, href, colorText } = Astro.props;
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-7" title="About me">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-6" title="About me">
   <div class="flex flex-col gap-2">
     <p class="text-sm font-light">
       Hi, I am Farchan, a front-end software developer from Italy.
@@ -34,7 +35,7 @@ const { title, body, colSpan, rowSpan, href, colorText } = Astro.props;
     </p>
     <p class="text-sm font-light">
       <a
-        href="/blog/post1"
+        href="/resume"
         target="_self"
         class="h-6 float-left hover:text-primary-400 transition-transform ease-in-out duration-100 z-10"
         class="text-red-500"><b>&#x21AF; Read more..</b></a>
